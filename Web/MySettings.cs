@@ -14,7 +14,6 @@ namespace Web
 
             CurrentEnvironment = built.GetValue("CurrentEnvironment", "Debug");
 
-            Environment.SetEnvironmentVariable("CurrentEnvironmentWeb", CurrentEnvironment, EnvironmentVariableTarget.User);
             var parsed = Enum.Parse<AppEnvironment>(CurrentEnvironment);
                 var appInfo = SystemConstants.GetAppInfo();
                 appInfo.Environment = parsed;
